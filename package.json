@@ -1,0 +1,21 @@
+{
+  "name": "mindcare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MindCare mental health support platform starter",
+  "main": "server/src/server.js",
+  "scripts": {
+    "start": "node server/src/server.js",
+    "dev": "nodemon server/src/server.js",
+    "check": "node --check server/src/server.js && node --check server/src/app.js && node --check server/src/config/supabase.js && node --check server/src/middleware/require-auth.js && node --check server/src/routes/auth.routes.js && node --check server/src/routes/posts.routes.js && node --check server/src/routes/check-ins.routes.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
